@@ -208,24 +208,23 @@ label {
 @media screen and (max-width: 448px) {
   body{
     font-size: 0.8rem;
-    max-width : 100%;
-    overflow-x: hidden;
   }
   .selected,.select-box .options-container{
     width : 80%;
   }
   form {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; */
+    margin : 20px 15%;
   }
   .submit-btn{
     top : 5px;
-    right : 91px;
+    right : 35px;
   }
   .logout-btn{
     top : -45px;
-    right : -85px;
+    right : -119px;
   }
   
 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dashboard | Select Elective</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="branch container">
+        <h2>Choose your branch</h2>
+  
+        <div class="select-box">
+          <div class="branch-options options-container">
+            <div class="branch-option option">
+              <input type="radio" class="radio" id="mechanical" name="branch" value="mechanical"/>
+              <label for="mechanical">Mechanical Engineering</label>
+            </div>
+  
+            <div class="branch-option option">
+              <input type="radio" class="radio" id="civil" name="branch" value="civil"/>
+              <label for="civil">Civil Engineering</label>
+            </div>
+  
+            <div class="branch-option option">
+              <input type="radio" class="radio" id="eee" name="branch" value="eee"/>
+              <label for="eee">Electrical & Electronics Engineering</label>
+            </div>
+  
+            <div class="branch-option option">
+              <input type="radio" class="radio" id="ece" name="branch" value="ece"/>
+              <label for="ece">Electronics & Communication Engineering</label>
+            </div>
+  
+            <div class="branch-option option">
+              <input type="radio" class="radio" id="cse" name="branch" value="cse"/>
+              <label for="cse">Computer Science Engineering</label>
+            </div>
+          </div>
+  
+          <div class="branch-selected selected">Select your branch</div>
+        </div>
+      </div>
+  
+      <div class="course container">
+        <h2>Choose your elective course</h2>
+  
+        <div class="select-box">
+          <div class="course-options options-container">
+            <!-- <div class="course-option option">
+              <input type="radio" class="radio" id="course" name="course" value=""/>
+              <label for="course"></label>
+            </div> -->
+          </div>
+  
+          <div class="course-selected selected">Select your elective</div>
+        </div>
+      </div>
+      <div class="button-container container">
+        <div>
+          <button class="button-common submit-btn" role="button">Submit</button>
+        </div>
+        <div>
+          <button class="button-common logout-btn" role="button">Logout</button>
+        </div>
+      </div>
+    </form>
+
+    <script src="main.js"></script>
+  </body>
+</html>

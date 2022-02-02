@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f6ff;
+  background: rgb(156, 25, 62);
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+}
+
+h2 {
+  margin: 16px;
+  color: #f5f6fa;
+}
+
+.container {
+  margin-top: 100px;
+  padding: 32px;
+}
+
+label {
+  display: block;
+  width: 100%;
+  height: 50px;
+}
+
+.select-box {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #414345;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1;
+}
+
+.options {
+  text-align: center;
+}
+
+.selected {
+  background: #414345;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("img/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active+.selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #525861;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #414b57;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.button-common {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #27ae60;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+  position : relative;
+  top : 53px;
+  right : 22px;
+}
+
+.button-common:hover {
+  background-color: #1e8449;
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: .35s;
+}
+
+.button-common:active {
+  transform: translateY(2px);
+  transition-duration: .35s;
+}
+
+.button-common:hover {
+  box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
+}
+
+.submit-btn{
+  position: relative;
+}
+.logout-btn {
+  position: relative;
+  background-color : red;
+  top :135px;
+  right :17px;
+}
+
+.logout-btn:hover {
+  background-color : #b0040c
+}
+
+@media all and (max-width:30em) {
+  a.button5 {
+    display: block;
+    margin: 0.4em auto;
+  }
+}
+
+
+@media screen and (max-width: 1115px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .submit-btn{
+    top : 5px;
+    right : 114px;
+  }
+  .logout-btn{
+    top : -45px;
+    right : -116px;
+  }
+  .container {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  body{
+    font-size: 0.8rem;
+  }
+  .selected,.select-box .options-container{
+    width : 80%;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .submit-btn{
+    top : 5px;
+    right : 91px;
+  }
+  .logout-btn{
+    top : -45px;
+    right : -85px;
+  }
+  
+
+  .container {
+    margin: 0 auto;
+  }
+}

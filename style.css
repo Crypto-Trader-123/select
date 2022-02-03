@@ -198,10 +198,11 @@ label {
 }
 
 @media screen and (max-width: 684px){
-  .selected ,.options-container,.option{
+  .selected ,.options-container,.option,.select-box{
     width : 270px;
     margin : 0 auto;
   }
+  
   form {
     margin-top : 2%;
     display : flex;

@@ -1,27 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background: #f7f6ff;
   background: rgb(156, 25, 62);
+}
+body,html{
+  position : fixed;
+  top : 0;
+  left : 0;
+  right : 0;
+  bottom : 0;
 }
 
 form {
   display: flex;
   justify-content: space-around;
+  margin-top : 10%;
 }
 
 h2 {
   margin: 16px;
   color: #f5f6fa;
+  text-align : center
 }
-
-.container {
-  margin-top: 100px;
-  padding: 32px;
+#title{
+  color : white;
+  text-align : center;
+  margin : 2rem;
 }
 
 label {
@@ -114,7 +125,7 @@ label {
   display: none;
 }
 
-.button-common {
+.button-submit {
   appearance: none;
   backface-visibility: hidden;
   background-color: #27ae60;
@@ -148,87 +159,68 @@ label {
   right : 22px;
 }
 
-.button-common:hover {
+.button-submit:hover {
   background-color: #1e8449;
   opacity: 1;
   transform: translateY(0);
   transition-duration: .35s;
 }
 
-.button-common:active {
+.button-submit:active {
   transform: translateY(2px);
   transition-duration: .35s;
 }
 
-.button-common:hover {
+.button-submit:hover {
   box-shadow: rgba(39, 174, 96, .2) 0 6px 12px;
 }
 
-.submit-btn{
-  position: relative;
-}
-.logout-btn {
-  position: relative;
-  background-color : red;
-  top :135px;
-  right :17px;
-}
 
-.logout-btn:hover {
-  background-color : #b0040c
-}
-
-@media all and (max-width:30em) {
-  a.button5 {
-    display: block;
-    margin: 0.4em auto;
-  }
-}
-
-
-@media screen and (max-width: 1115px) {
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .submit-btn{
-    top : 5px;
-    right : 114px;
-  }
-  .logout-btn{
-    top : -45px;
-    right : -116px;
-  }
-  .container {
-    margin: 0 auto;
-  }
-}
-
-@media screen and (max-width: 448px) {
+@media screen and (max-width: 1050px){
   body{
+    width: 100%;
+    display:inline-block;
     font-size: 0.8rem;
   }
-  .selected,.select-box .options-container{
-    width : 80%;
+  .container{
+    margin-top : 10px;
   }
-  form {
-    /* display: flex;
+	form {
+    margin-top : 2%;
+    display : flex;
     flex-direction: column;
-    justify-content: center; */
-    margin : 20px 15%;
+    align-items : center;
   }
-  .submit-btn{
-    top : 5px;
-    right : 35px;
-  }
-  .logout-btn{
-    top : -45px;
-    right : -119px;
-  }
-  
-
-  .container {
-    margin: 0 auto;
+  .button-submit{
+    position : relative;
+    left:1%;
   }
 }
+
+@media screen and (max-width: 684px){
+  .selected ,.options-container,.option{
+    width : 270px;
+    margin : 0 auto;
+  }
+  form {
+    margin-top : 2%;
+    display : flex;
+    flex-direction: column;
+    align-items : center;
+  }
+  h2{
+    font-size : 1rem;
+  }
+  .button-submit{
+    width : 100px;
+    height : 50px;
+  }
+}
+
+@media screen and (max-width: 372px){
+  .form {
+    position : relative;
+    left : 2px;
+  }
+}
+
